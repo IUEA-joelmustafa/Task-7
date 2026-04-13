@@ -88,6 +88,33 @@ public class FiveTabbedApp {
 
         tabs.addTab("Grade Calc", gradePanel);
 
+        // =============== TAB 4: COLOR BUTTONS ===============
+        JPanel colorPanel = new JPanel();
+
+        JButton redBtn = new JButton("Red");
+        JButton greenBtn = new JButton("Green");
+        JButton blueBtn = new JButton("Blue");
+
+        // Button actions
+        redBtn.addActionListener(e -> colorPanel.setBackground(Color.RED));
+        greenBtn.addActionListener(e -> colorPanel.setBackground(Color.GREEN));
+        blueBtn.addActionListener(e -> colorPanel.setBackground(Color.BLUE));
+
+        // Add buttons to panel
+        colorPanel.add(redBtn);
+        colorPanel.add(greenBtn);
+        colorPanel.add(blueBtn);
+
+        tabs.addTab("Colors", colorPanel);
+
+        // ================= TAB 5: ABOUT =================
+        JPanel about = new JPanel();
+        about.add(new JLabel("Smart Student Manager v1.0"));
+        about.add(new JLabel("Developed using Java Swing"));
+        about.add(new JLabel("Demonstrates tabbed interface and interactivity"));
+
+        tabs.addTab("About", about);
+
         // ================= FINAL =================
         frame.add(tabs);
         frame.setVisible(true);
